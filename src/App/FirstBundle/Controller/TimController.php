@@ -37,7 +37,7 @@ class TimController extends Controller
         switch ($name) {
             case 'barsa':
                 $Barcelona = new Barcelona('Luis Enrique', 'Camp Nou', 'Xavier ');
-                echo $Barcelona->show();
+                $checkb = $Barcelona->show();
                 break;
             case 'real':
                 $RealMadrid = new RealMadrid('Carlo Ancelotti', 'Santiago Bernabeu', 'Casillas');
@@ -49,7 +49,7 @@ class TimController extends Controller
                 return $this->render('AppFirstBundle:Default:error404.html.twig', array('name' => $name));
         }
 
-        return $this->render('AppFirstBundle:Default:tim.html.twig', array('name' => $name));
+        return $this->render('AppFirstBundle:Default:tim.html.twig', array('name' => $name, 'checkb'=>$checkb));
     }
 }
 //    /**
