@@ -23,7 +23,7 @@ class TimController extends Controller
         return $this->render('AppFirstBundle:Default:tims.html.twig');
     }
 
-    public function getErrorAction()
+    public function ErrorAction()
     {
         return $this->render('AppFirstBundle:Default:error404.html.twig');
     }
@@ -46,7 +46,7 @@ class TimController extends Controller
                 echo ' Champions League - ' . $RealMadrid->LC();
                 break;
             default:
-                return new Response(sprintf('<h1 style="color: red">Error:</h1><p style="color: red">Method not found for tim <b>"%s"</b></p>', $timId));
+                return $this->render('AppFirstBundle:Default:error404.html.twig', array('name' => $name));
         }
 
         return $this->render('AppFirstBundle:Default:tim.html.twig', array('name' => $name));
