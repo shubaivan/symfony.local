@@ -5,7 +5,7 @@
  * Date: 30.10.14
  * Time: 13:03
  */
-namespace mvc\Models;
+namespace App\FirstBundle\Models;
 
 interface LCInterface
 {

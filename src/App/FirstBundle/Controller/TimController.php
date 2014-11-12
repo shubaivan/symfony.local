@@ -3,6 +3,8 @@
 namespace App\FirstBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use App\FirstBundle\Models\Barcelona;
+use App\FirstBundle\Models\RealMadrid;
 
 
 class TimController extends Controller
@@ -16,7 +18,7 @@ class TimController extends Controller
     /**
      * @return Response
      */
-    public function getTimsAction()
+    public function TimsAction()
     {
         return $this->render('AppFirstBundle:Default:tims.html.twig');
     }
@@ -30,9 +32,9 @@ class TimController extends Controller
      * @param  string $id
      * @return Response
      */
-    public function getTimAction($timId)
+    public function TimAction($name)
     {
-        switch ($timId) {
+        switch ($name) {
             case 'barsa':
                 $Barcelona = new Barcelona('Luis Enrique', 'Camp Nou', 'Xavier ');
                 echo $Barcelona->show();
@@ -47,7 +49,7 @@ class TimController extends Controller
                 return new Response(sprintf('<h1 style="color: red">Error:</h1><p style="color: red">Method not found for tim <b>"%s"</b></p>', $timId));
         }
 
-        return $this->render('AppFirstBundle:Default:tim.html.twig', array('show' => $timId)) . '<br>' . $timId;
+        return $this->render('AppFirstBundle:Default:tim.html.twig', array('name' => $name));
     }
 }
 //    /**

@@ -1,6 +1,6 @@
 <?php
 
-namespace mvc\Models;
+namespace App\FirstBundle\Models;
 
 class Article
 {

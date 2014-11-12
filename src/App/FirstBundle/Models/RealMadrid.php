@@ -6,7 +6,7 @@
  * Time: 22:39
  */
 
-namespace mvc\Models;
+namespace App\FirstBundle\Models;
 
 class RealMadrid extends AbstractFootballTim implements LCInterface
 {

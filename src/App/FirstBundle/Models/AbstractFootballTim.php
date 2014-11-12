@@ -6,7 +6,7 @@
  * Time: 22:07
  */
 
-namespace mvc\Models;
+namespace App\FirstBundle\Models;
 
 abstract class AbstractFootballTim
 {

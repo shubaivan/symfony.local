@@ -6,7 +6,7 @@
  * Time: 22:34
  */
 
-namespace mvc\Models;
+namespace App\FirstBundle\Models;
 
 class Barcelona extends AbstractFootballTim
 {
