@@ -10,4 +10,10 @@ class DefaultController extends Controller
     {
         return $this->render('AppFirstBundle:Default:index.html.twig', array('name' => $name));
     }
+
+
+//    public function errorAction()
+//    {
+//        return new $this->render('AppFirstBundle:Default:error404.html.twig');
+//    }
 }

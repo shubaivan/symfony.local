@@ -1,3 +1,9 @@
 app_first_homepage:
     path:     /hello/{name}
     defaults: { _controller: AppFirstBundle:Default:index }
+app_tims_homepage:
+    path:     /tim
+    defaults: { _controller: AppFirstBundle:Tim:Tims }
+app_tim_homepage:
+    path:     /tim/{name}
+    defaults: { _controller: AppFirstBundle:Tim:Tim }
