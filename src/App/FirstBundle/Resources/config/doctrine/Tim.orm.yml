@@ -1,5 +1,6 @@
 App\FirstBundle\Entity\Tim:
     type: entity
+    repositoryClass: App\FirstBundle\Entity\TimRepository
     table: tim
     id:
         id:
@@ -18,3 +19,10 @@ App\FirstBundle\Entity\Tim:
         captain:
             type: string
             length: 100
+    manyToOne:
+            command:
+                targetEntity: Command
+                inversedBy: tims
+                joinColumn:
+                    name: name
+                    referencedColumnName: nametim

@@ -1,0 +1,22 @@
+App\FirstBundle\Entity\Command:
+    type: entity
+    table: null
+    repositoryClass: App\FirstBundle\Entity\CommandRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        nametim:
+            type: string
+            length: 255
+        club:
+            type: string
+            length: 255
+    lifecycleCallbacks: {  }
+    oneToMany:
+            tims:
+                targetEntity: Tim
+                mappedBy: nametim
