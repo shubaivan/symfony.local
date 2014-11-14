@@ -1,11 +1,12 @@
 <html>
 <head>
-    {% stylesheets 'FirstBundle/Resources/public/css/db.css' filter='cssrewrite' %}
-    <link rel="stylesheet" href="{{ asset_url }}" />
-    {% endstylesheets %}
+    {% block stylesheets %}
+        <link rel="stylesheet" href="{{ asset('bundles/appfirst/css/db.css') }}" type="text/css" media="all">
+    {% endblock %}
+
 </head>
 <body>
-<table >
+<table>
     <tr>
         <td>id</td>
         <td>{{ product.id }}</td>
@@ -22,7 +23,6 @@
         <td>name</td>
         <td>{{ product.name }}</td>
     </tr>
-
 </table>
 </body>
 </html>
