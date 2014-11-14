@@ -1,8 +1,8 @@
 <html>
 <head>
-    {% block stylesheets %}
-        <link href="{{ asset('FirstBundle/Resources/public/css/db.css') }}" type="text/css" rel="stylesheet" />
-    {% endblock %}
+    {% stylesheets 'FirstBundle/Resources/public/css/db.css' filter='cssrewrite' %}
+    <link rel="stylesheet" href="{{ asset_url }}" />
+    {% endstylesheets %}
 </head>
 <body>
 <table >
