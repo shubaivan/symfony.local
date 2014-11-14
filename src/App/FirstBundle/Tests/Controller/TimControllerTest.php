@@ -15,9 +15,14 @@ class TimControllerTest extends WebTestCase
     {
         $client = static::createClient();
 
-        $crawler = $client->request('GET', '/tims/barsa');
+        $crawlerb = $client->request('GET', '/tims/barsa');
+//        $crawlerr = $client->request('GET', '/tims/real');
+
 
         $this->assertTrue
-        ($crawler->filter('html:contains("trainer Luis Enrique stadium in Camp Nou captain Xavier ")')->count() > 0);
+        ($crawlerb->filter('html:contains("trainer Luis Enrique stadium in Camp Nou captain Xavier ")')->count() > 0);
+//        $this->assertTrue
+//        ($crawlerr->filter('html:contains(" trainer Carlo Ancelotti stadium in Santiago Bernabeu captain Casillas Chempion  ")')->count() > 0);
     }
+
 }

@@ -41,15 +41,17 @@ class TimController extends Controller
                 break;
             case 'real':
                 $RealMadrid = new RealMadrid('Carlo Ancelotti', 'Santiago Bernabeu', 'Casillas');
-                echo $RealMadrid->show();
+                $checkb = $RealMadrid->show();
 
-                echo ' Champions League - ' . $RealMadrid->LC();
+                $lc = $RealMadrid->LC();
                 break;
             default:
                 return $this->render('AppFirstBundle:Default:error404.html.twig', array('name' => $name));
         }
 
-        return $this->render('AppFirstBundle:Default:tim.html.twig', array('name' => $name, 'checkb'=>$checkb));
+        return $this->render('AppFirstBundle:Default:tim.html.twig', array('name' => $name, 'checkb'=>$checkb,
+            'lc' => empty($lc) ? '' : $lc));
+
     }
 }
 //    /**
