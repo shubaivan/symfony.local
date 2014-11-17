@@ -12,7 +12,7 @@ class Product {
 
     protected $price;
 
-    protected $description;
+    protected $description  ;
 
     /**
      * @var integer
@@ -97,5 +97,33 @@ class Product {
     public function getDescription()
     {
         return $this->description;
+    }
+    /**
+     * @var \App\FirstBundle\Entity\Category
+     */
+    private $category;
+
+
+    /**
+     * Set category
+     *
+     * @param \App\FirstBundle\Entity\Category $category
+     * @return Product
+     */
+    public function setCategory(\App\FirstBundle\Entity\Category $category = null)
+    {
+        $this->category = $category;
+
+        return $this;
+    }
+
+    /**
+     * Get category
+     *
+     * @return \App\FirstBundle\Entity\Category 
+     */
+    public function getCategory()
+    {
+        return $this->category;
     }
 }
