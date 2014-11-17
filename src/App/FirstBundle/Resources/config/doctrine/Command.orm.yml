@@ -1,22 +1,28 @@
 App\FirstBundle\Entity\Command:
     type: entity
-    table: null
-    repositoryClass: App\FirstBundle\Entity\CommandRepository
+    repositoryClass: App\FirstBundle\Entity\TimRepository
+    table: tim
     id:
         id:
             type: integer
-            id: true
-            generator:
-                strategy: AUTO
+            generator: { strategy: AUTO }
     fields:
-        nametim:
+        name:
             type: string
-            length: 255
-        club:
+            length: 100
+        trainer:
             type: string
-            length: 255
-    lifecycleCallbacks: {  }
-    oneToMany:
-            tims:
-                targetEntity: Tim
-                mappedBy: nametim
+            length: 100
+        stadium:
+            type: string
+            length: 100
+        captain:
+            type: string
+            length: 100
+    manyToOne:
+            name:
+                targetEntity: AllCommand
+                inversedBy: nametim
+                joinColumn:
+                    name: name
+                    referencedColumnName: id
