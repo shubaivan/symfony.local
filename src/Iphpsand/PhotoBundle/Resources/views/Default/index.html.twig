@@ -1,1 +1,19 @@
-Hello {{ name }}!
+<h1>Фотографии</h1>
+
+<h2>Загруженные фотографии</h2>
+
+{% for photo in photos %}
+    <div>
+        <h3>{{ photo.title }}</h3>
+        <div>{{ photo.date | date ('Y.m.d') }}</div>
+        <a href="{{ photo.photo.path }}" target="_blank"><img src="{{ photo.photo.path }}" {{ photo.photo.height > 150 ? 'height="150"':''}}/></a>
+    </div>
+{% endfor%}
+
+<h2>Загрузить фото</h2>
+
+<form action="./" enctype="multipart/form-data" method="post">
+
+    {{ form_widget(uploadForm) }}
+    <input type="submit" value="Загрузить фото"/>
+</form>

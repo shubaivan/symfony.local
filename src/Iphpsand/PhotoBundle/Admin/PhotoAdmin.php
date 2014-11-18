@@ -8,11 +8,9 @@
 
 namespace Iphpsand\PhotoBundle\Admin;
 
-
-class PhotoAdmin {
-    use Sonata\AdminBundle\Admin\Admin;
-    use Sonata\AdminBundle\Form\FormMapper;
-    use Sonata\AdminBundle\Datagrid\ListMapper;
+use Sonata\AdminBundle\Admin\Admin;
+use Sonata\AdminBundle\Form\FormMapper;
+use Sonata\AdminBundle\Datagrid\ListMapper;
 
 class PhotoAdmin extends Admin
 {
@@ -27,4 +25,3 @@ class PhotoAdmin extends Admin
     }
 }
 
-}

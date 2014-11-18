@@ -19,11 +19,11 @@ class AppKernel extends Kernel
             new App\FirstBundle\AppFirstBundle(),
             new Iphpsand\PhotoBundle\IphpsandPhotoBundle(),
             new Iphp\FileStoreBundle\IphpFileStoreBundle(),
-            new Sonata\AdminBundle\SonataAdminBundle(),
-            new Sonata\DoctrineORMAdminBundle\SonataDoctrineORMAdminBundle(),
-            new Sonata\BlockBundle\SonataBlockBundle(),
-            new Knp\Bundle\MenuBundle\KnpMenuBundle(),
-            new Sonata\jQueryBundle\SonatajQueryBundle(),
+//            new Sonata\AdminBundle\SonataAdminBundle(),
+//            new Sonata\DoctrineORMAdminBundle\SonataDoctrineORMAdminBundle(),
+//            new Sonata\BlockBundle\SonataBlockBundle(),
+//            new Knp\Bundle\MenuBundle\KnpMenuBundle(),
+//            new Sonata\CoreBundle\SonataCoreBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {
