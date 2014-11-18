@@ -52,7 +52,7 @@ class DefaultController extends Controller
         $product = $this->getDoctrine()
             ->getRepository('AppFirstBundle:Product')
             ->find($id);
-        $category = $product->getCategory()->getName();
+        $categoryName = $product->getCategory()->getName();
 
 
         if (!$product) {
@@ -61,7 +61,7 @@ class DefaultController extends Controller
             );
             }
 
-        return $this->render('AppFirstBundle:Default:db.html.twig', array('product' => $product, 'category' => $category));
+        return $this->render('AppFirstBundle:Default:db.html.twig', array('product' => $product, 'categoryName' => $categoryName));
 
     }
 

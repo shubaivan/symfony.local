@@ -1,6 +1,6 @@
-app_first_homepage:
-    path:     /hello/{name}
-    defaults: { _controller: AppFirstBundle:Default:index }
+#app_first_homepage:
+#    path:     /hello/{name}
+#    defaults: { _controller: AppFirstBundle:Default:index }
 app_dbset_homepage:
     path:     /db
     defaults: { _controller: AppFirstBundle:Default:create }
