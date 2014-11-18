@@ -38,7 +38,7 @@ class PhotoController extends Controller
             }
         }
 
-        return $this->render('IphpsandPhotoBundle:Photo:index.html.twig', array(
+        return $this->render('IphpsandPhotoBundle:Default:index.html.twig', array(
             'uploadForm' => $uploadForm->createView(),
             'photos' => $em->getRepository ('IphpsandPhotoBundle:Photo')->findAll()
         ));

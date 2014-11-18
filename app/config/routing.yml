@@ -5,6 +5,4 @@ iphpsand_photo:
 app_first:
     resource: "@AppFirstBundle/Resources/config/routing.yml"
     prefix:   /
-iphpsand_photo:
-    pattern:  /photo/
-    defaults: { _controller: IphpsandPhotoBundle:Photo:index }
+
