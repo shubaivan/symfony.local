@@ -19,7 +19,8 @@
         "sensio/framework-extra-bundle": "~3.0",
         "incenteev/composer-parameter-handler": "~2.0",
         "phpunit/phpunit": "4.3.4",
-        "iphp/filestore-bundle": "dev-master"
+        "iphp/filestore-bundle": "dev-master",
+         "sonata-project/doctrine-orm-admin-bundle":"dev-master"
     },
     "require-dev": {
         "sensio/generator-bundle": "~2.3"

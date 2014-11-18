@@ -3,7 +3,7 @@
 <doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping"
                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                   xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
-    <entity name="Iphpsandbox\PhotoBundle\Entity\Photo">
+    <entity name="Iphpsand\PhotoBundle\Entity\Photo">
         <id name="id" type="integer" column="id">
             <generator strategy="AUTO"/>
         </id>

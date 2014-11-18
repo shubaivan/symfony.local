@@ -71,6 +71,7 @@ swiftmailer:
     password:  "%mailer_password%"
     spool:     { type: memory }
 
+# app/config/config.yml
 iphp_file_store:
     mappings:
        photo:
