@@ -75,7 +75,7 @@ swiftmailer:
 iphp_file_store:
     mappings:
        photo:
-           upload_dir:  web/photo
+           upload_dir:  photo
            upload_path: /photo
            directory_namer:
                date:
