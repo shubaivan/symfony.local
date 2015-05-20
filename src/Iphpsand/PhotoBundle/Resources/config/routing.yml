@@ -2,5 +2,5 @@ iphpsand_photo_homepage:
     path:     /hello/{name}
     defaults: { _controller: IphpsandPhotoBundle:Default:index }
 iphpsand_photo:
-    pattern:  /photo/
+    pattern:  /
     defaults: { _controller: IphpsandPhotoBundle:Photo:index }
