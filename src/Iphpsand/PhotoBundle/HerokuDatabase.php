@@ -2,7 +2,7 @@
 
 namespace Iphpsand\PhotoBundle;
 
-use Sensio\Bundle\DistributionBundle\Composer;
+use Composer\Script\Event;
 
 class HerokuDatabase
 {
