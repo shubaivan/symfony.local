@@ -5,8 +5,8 @@
  * Date: 18.11.14
  * Time: 10:22
  */
-
 namespace Iphpsand\PhotoBundle\Entity;
+
 use Iphp\FileStoreBundle\Mapping\Annotation as FileStore;
 use Symfony\Component\Validator\Constraints as Assert;
 

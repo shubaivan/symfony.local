@@ -45,23 +45,59 @@ assetic:
 # Doctrine Configuration
 doctrine:
     dbal:
-        driver:   "%database_driver%"
-        host:     "%database_host%"
-        port:     "%database_port%"
-        dbname:   "%database_name%"
-        user:     "%database_user%"
-        password: "%database_password%"
-        charset:  UTF8
-        # if using pdo_sqlite as your database driver:
-        #   1. add the path in parameters.yml
-        #     e.g. database_path: "%kernel.root_dir%/data/data.db3"
-        #   2. Uncomment database_path in parameters.yml.dist
-        #   3. Uncomment next line:
-        #     path:     "%database_path%"
+        default_connection: default
+        connections:
+            # your default MySQL connection
+            default:
+                driver:   "%database_driver%"
+                host:     "%database_host%"
+                port:     "%database_port%"
+                dbname:   "%database_name%"
+                user:     "%database_user%"
+                password: "%database_password%"
+                charset:  UTF8
+#
+#            # how you call your additional connection is up to you
+#            # for me it is pgsql - you need it in a bit again
+#            pgsql:
+#                driver:   "%pgsql_database_driver%"
+#                host:     "%pgsql_database_host%"
+#                port:     "%pgsql_database_port%"
+#                dbname:   "%pgsql_database_name%"
+#                user:     "%pgsql_database_user%"
+#                password: "%pgsql_database_password%"
+#                charset:  UTF8
 
     orm:
+
         auto_generate_proxy_classes: "%kernel.debug%"
         auto_mapping: true
+        # auto_mapping: true - get's removed
+        # default entitity manager will be declared
+#        default_entity_manager: default
+#        auto_generate_proxy_classes: "%kernel.debug%"
+#
+#        entity_managers:
+#            default:
+#                connection: default
+#
+#                # unfortunately you have to list ALL bundles
+#                # which are using the default connection now
+#                mappings:
+#                    GenjSocialFeedBundle:  ~
+#                    GenjThumbnailBundle:  ~
+#                    GenjUrlGeneratorBundle:  ~
+#                    AppFirstBundle: ~
+#                    IphpsandPhotoBundle: ~
+#
+#            pgsql:
+#                connection: pgsql    # connection name for your additional DB
+#
+#                # bundles which going to use the PostgreSQL DB
+#                mappings:
+#                    MyPostgreSQLBundle: ~
+#                    AppFirstBundle: ~
+#                    IphpsandPhotoBundle: ~
 
 # Swiftmailer Configuration
 swiftmailer:
