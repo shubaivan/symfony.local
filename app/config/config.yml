@@ -33,7 +33,7 @@ twig:
 assetic:
     debug:          "%kernel.debug%"
     use_controller: false
-    bundles:        [ AppFirstBundle ]
+    bundles:        [ ]
     #java: /usr/bin/java
     filters:
         cssrewrite: ~
@@ -95,7 +95,7 @@ doctrine:
 #
 #                # bundles which going to use the PostgreSQL DB
 #                mappings:
-#                    MyPostgreSQLBundle: ~
+#
 #                    AppFirstBundle: ~
 #                    IphpsandPhotoBundle: ~
 
