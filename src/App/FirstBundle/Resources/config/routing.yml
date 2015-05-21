@@ -1,0 +1,15 @@
+#app_first_homepage:
+#    path:     /hello/{name}
+#    defaults: { _controller: AppFirstBundle:Default:index }
+app_dbset_homepage:
+    path:     /db
+    defaults: { _controller: AppFirstBundle:Default:create }
+app_dbshow_homepage:
+    path:     /db/{id}
+    defaults: { _controller: AppFirstBundle:Default:show }
+app_tims_homepage:
+    path:     /tims
+    defaults: { _controller: AppFirstBundle:Tim:Tims }
+app_tim_homepage:
+    path:     /tims/{name}
+    defaults: { _controller: AppFirstBundle:Tim:Tim }
