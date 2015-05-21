@@ -7,6 +7,8 @@
         "psr-0": { "": "src/", "SymfonyStandard": "app/" }
     },
     "require": {
+        "ext-intl": "*",
+        "ext-mbstring": "*",
         "ext-pdo": "*",
         "ext-pdo_pgsql": "*",
         "php": ">=5.3.3",
@@ -29,7 +31,7 @@
     },
     "scripts": {
         "pre-install-cmd": [
-            "Iphpsand\\HerokuDatabase::populateEnvironment"
+            "Iphpsand\\PhotoBundle\\HerokuEnvironment::populateEnvironment"
         ],
         "post-root-package-install": [
             "SymfonyStandard\\Composer::hookRootPackageInstall"
@@ -55,6 +57,15 @@
         "bin-dir": "bin"
     },
     "extra": {
+        "heroku": {
+            "framework": "symfony2",
+            "document-root": "web",
+            "php-config": [
+                "date.timezone=Europe/Kiev",
+                "display_errors=off",
+                "short_open_tag=off"
+            ]
+        },
         "symfony-app-dir": "app",
         "symfony-web-dir": "web",
         "incenteev-parameters": {
