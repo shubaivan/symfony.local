@@ -1,7 +1,7 @@
 App\FirstBundle\Entity\Category:
     type: entity
     table: null
-    repositoryClass: App\FirstBundle\Entity\CategoryRepository
+
     id:
         id:
             type: integer
